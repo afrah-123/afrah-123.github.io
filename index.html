@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("hi.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+ont-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: grey;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: grey;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#ABOUT {background-image:whitesmoke;}
+#EDUCATION {background-image:whitesmoke;}
+#TECHNICALSKILLS {background-color:whitesmoke;}
+#ACHIEVEMENTS {background-color: whitesmoke;}
+</style>
+</head>
+<body>
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  
+  <h1 style="font-size:50px">I am Noha Nasar Khan</h1>
+  <p> I'm a student pursuing Computer Science Engineering</p>
+</div>
+
+<button class="tablink" onclick="openPage('ABOUT', this, 'white')" id="defaultOpen">ABOUT</button>
+<button class="tablink" onclick="openPage('EDUCATION', this, 'white')">EDUCATION</button>
+<button class="tablink" onclick="openPage('TECHNICAL SKILLS', this, 'white')">TECHNICAL SKILLS</button>
+<button class="tablink" onclick="openPage('ACHIEVEMENTS', this, 'white')">ACHIEVEMENTS</button>
+
+<div id="ABOUT" class="tabcontent"> 
+    <h1> ABOUT</h1>
+    <p><h3>HELLO!!!!</h3>
+         This is Noha Nasar Khan pursuing Computer Science Engineering in Muffakham Jah College Of Engineering And Technology.Iam in 3rd year now.I have quite a few technical skills and achievements.I love taekwondo,painting and dancing.I do alot of paintings in my leisure time.I like to travel alot and explore new places.To know more about me click on the following tabs :) </p>
+  </div>
+<div id="EDUCATION" class="tabcontent"> 
+  <h1> EDUCATION</h1>
+  <p><h3>
+      SO GOOD TO SEE YOU HERE. I REALLY APPRECIATE YOUR CURIOSITY:)
+  </h3>
+So I did my schooling from Brilliant Grammer High schooling(98%),
+Inter from Narayana College (98.2%) and noww iam in this  amazing college pursuing Computer Science Engineering(83%)
+</p>
+</div>
+
+<div id="TECHNICAL SKILLS" class="tabcontent">
+<h1>TECHNICAL SKILLS</h1>
+<ul>
+    <li>C</li>
+    <li>C++</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JAVA</li>
+    <li>JAVA SCRIPT</li>
+</ul>   
+</div>
+
+<div id="ACHIEVEMENTS" class="tabcontent">
+  <h3>ACHIEVEMENTS</h3>
+  <ul>
+      <li>Taewondo state level champion</li>
+      <li>Won first prize in Inter school Debate Competition </li>
+      <li>Won first prize in painting</li>
+  </ul>
+</div>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html>
